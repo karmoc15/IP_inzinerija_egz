@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Current light sensor value -->
+    <TextView
+        android:id="@+id/lightValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Light Value: 0"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Light indicators -->
+    <TextView
+        android:id="@+id/blueLightIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue: OFF"
+        android:textSize="16sp"
+        android:textColor="#0000FF"
+        android:layout_below="@id/lightValueText"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/greenLightIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green: OFF"
+        android:textSize="16sp"
+        android:textColor="#00FF00"
+        android:layout_below="@id/blueLightIndicator"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/redLightIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red: OFF"
+        android:textSize="16sp"
+        android:textColor="#FF0000"
+        android:layout_below="@id/greenLightIndicator"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Threshold for "Darkness" -->
+    <TextView
+        android:id="@+id/darkThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Darkness Threshold:"
+        android:textSize="16sp"
+        android:layout_below="@id/redLightIndicator"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/darkThresholdSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1023"
+        android:progress="300"
+        android:layout_below="@id/darkThresholdLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/darkThresholdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value: 300"
+        android:textSize="14sp"
+        android:layout_below="@id/darkThresholdSeekBar"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Threshold for "Blinding Light" -->
+    <TextView
+        android:id="@+id/blindingThresholdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Blinding Light Threshold:"
+        android:textSize="16sp"
+        android:layout_below="@id/darkThresholdValue"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/blindingThresholdSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1023"
+        android:progress="700"
+        android:layout_below="@id/blindingThresholdLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/blindingThresholdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value: 700"
+        android:textSize="14sp"
+        android:layout_below="@id/blindingThresholdSeekBar"
+        android:layout_marginTop="4dp"/>
+
+</RelativeLayout>

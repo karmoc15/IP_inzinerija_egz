@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apšvietimo stebėjimas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Apšvietimo stebėjimas</h1>
+  <p id="ldrValue">Apšvietimo lygis: Laukiama duomenų...</p>
+  
+  <div class="slider-container">
+    <label for="darkSlider">Tamsos riba:</label>
+    <input type="range" id="darkSlider" min="0" max="1023" value="300">
+    <span id="darkValue">300</span>
+  </div>
+  
+  <div class="slider-container">
+    <label for="brightSlider">Akinimo riba:</label>
+    <input type="range" id="brightSlider" min="0" max="1023" value="700">
+    <span id="brightValue">700</span>
+  </div>
+
+  <div class="led-status">
+    <p>LED būsena:</p>
+    <div class="led-container">
+      <div id="blueLed" class="led blue"></div>
+      <div id="greenLed" class="led green"></div>
+      <div id="redLed" class="led red"></div>
+    </div>
+    <p id="ledStatusText">Laukiama...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
